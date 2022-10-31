@@ -4,6 +4,7 @@ const currentTemp = document.getElementById("currentT");
 const feelslikeElement = document.getElementById("feelslike");
 const humidityElement = document.getElementById("humid");
 const weatherElement = document.getElementById("weather");
+const weatherIcon = document.getElementById("weathericon");
 const formsearch = document.getElementById("search");
 const imageauthor = document.getElementById("author");
 const units = document.getElementById("units");
@@ -102,11 +103,15 @@ function camelCase(str) {
 }
 async function reportw() {
   await getWeather().then(function () {
+    let iconcode = data.weather[0].icon;
+    let iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
+
     cityElement.innerText = city;
     currentTemp.innerText = "Current Temp: " + data.main.temp + " C";
     humidityElement.innerText = "Humidity: " + data.main.humidity + "%";
     feelslikeElement.innerText = "Feels Like: " + data.main.feels_like + " C";
     weatherElement.innerText = camelCase(data.weather[0].description);
+    weatherIcon.src = iconurl;
   });
 }
 async function reportwF() {

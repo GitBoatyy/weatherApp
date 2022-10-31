@@ -12,6 +12,20 @@ body{
     display: flex;
     flex-direction: column;
 }
+.weathercontainer{
+width: fit-content;
+  background-color: #383b3d51;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+#weatherelement{
+  display: flex;
+}
+#weathericon{
+  filter: brightness(0) invert(1);
+  height: 2.1rem;
+  margin-left: 1rem;
+}
 #imageauthor{
     position: absolute;
     bottom: 0;
