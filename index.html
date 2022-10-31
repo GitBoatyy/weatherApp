@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Here</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+    <div id="container">
+        <div id="city" class="weatherinfo"></div>
+        <div id="currentT" class="weatherinfo"></div>
+        <div id="humid" class="weatherinfo"></div>
+        <div id="feelslike" class="weatherinfo"></div>
+        <div id="weather" class="weatherinfo"></div>
+    </div>
+    <div class="search">
+        <form id="search" name="myform">
+            <input name="cityname" id="citysearch" type="text" required placeholder="Enter a city name" value="">
+        </form>
+        <div class="button r" id="button-1">
+            <input type="checkbox" class="checkbox" id="units" />
+            <div class="knobs"></div>
+            <div class="layer"></div>
+        </div>
+    </div>
+    <div id="imageauthor">
+        <div id="author" class="whitef">
+            <a href="https://www.instagram.com/kolbymilton/?hl=en">Image By: Kolby Milton</a>
+        </div>
+    </div>
+</body>
+<script src="./script.js"></script>
+</html>
