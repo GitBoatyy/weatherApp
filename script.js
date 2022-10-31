@@ -28,7 +28,7 @@ async function getWeather() {
   localStorage.setItem("setcity", formsearch.cityname.value);
   if (units.checked == false) {
     await fetch(
-      "http://api.openweathermap.org/data/2.5/weather?q=" +
+      "https://api.openweathermap.org/data/2.5/weather?q=" +
         formsearch.cityname.value +
         "&units=metric&&APPID=a5f182cf976716a7e32f62e39ff8fe22"
     )
@@ -41,7 +41,7 @@ async function getWeather() {
         lon = response.coord.lon;
       });
     await fetch(
-      "http://api.openweathermap.org/geo/1.0/reverse?lat=" +
+      "https://api.openweathermap.org/geo/1.0/reverse?lat=" +
         lat +
         "&lon=" +
         lon +
@@ -60,7 +60,7 @@ async function getWeather() {
       });
   } else if (units.checked == true) {
     await fetch(
-      "http://api.openweathermap.org/data/2.5/weather?q=" +
+      "https://api.openweathermap.org/data/2.5/weather?q=" +
         formsearch.cityname.value +
         "&units=imperial&&APPID=a5f182cf976716a7e32f62e39ff8fe22"
     )
@@ -73,7 +73,7 @@ async function getWeather() {
         lon = response.coord.lon;
       });
     await fetch(
-      "http://api.openweathermap.org/geo/1.0/reverse?lat=" +
+      "https://api.openweathermap.org/geo/1.0/reverse?lat=" +
         lat +
         "&lon=" +
         lon +
